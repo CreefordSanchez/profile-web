@@ -13,6 +13,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,7 +31,7 @@ ul, li, a {
   color: var(--app-white);
 }
 
-a, li{
+a, li, .fa-bars{
   display: inline;
   cursor: pointer;
 }
@@ -50,6 +51,12 @@ header {
   top: 0;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
+.fa-bars {
+  z-index: 2;
+  display: none;
+  color: var(--app-white);
+  font-size: 20px
+}
 .header-main {
   display: flex;
   justify-content: space-between;
@@ -62,6 +69,7 @@ header {
   border-radius: 10px;
   color: var(--app-white);
 }
+
 nav {
   font-size: 20px;
   font-weight: 500;
@@ -73,6 +81,34 @@ nav {
   }
 }
 
+.nav-bar {
+  display: none;
+  text-align: right;
+  padding-top: 49px;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  justify-content: right;
+
+  ul {
+    background-color: var(--app-lightblack);
+    display: grid;
+    padding: 0 5px 0 20px;
+  }
+
+  li {
+    margin: 5px 0;
+    font-weight: 500;
+  }
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayFlex {
+  display: flex;
+}
 /*-----------------------------------------------
  Hero-Banner 
 -------------------------------------------------*/
@@ -115,6 +151,7 @@ nav {
   color: var(--app-orange);
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 255px;
   height: 43px;
   line-height: 43px;
@@ -172,10 +209,13 @@ body {
 
 .code-list {
   display: flex;
+  flex-wrap: wrap;
   width: 50vw;
   justify-content: center;
 }
-
+.flex-code-list {
+  display: none;
+}
 .col {
   display: grid;
   justify-content: center;
@@ -209,12 +249,14 @@ body {
     width: 60px;
   }
 }
+
 /*-----------------------------------------------
  Projects 
 -------------------------------------------------*/
 .project-list {
   margin-bottom: 90px;
 }
+
 .project {
   display: flex;
   margin-bottom: 200px;
@@ -402,13 +444,28 @@ footer {
     justify-content: center;
   }
 
+  .about-info {
+    width: 100%;
+  }
   .code-list {
+    display: none;
+  }
+
+  .flex-code-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
+    .box {
+      display: inline;
+      text-align: center;
+    }
   }
+
   .about-me {
     margin-bottom: 70px;
-    width: 400px;
+    width: 60vw;
+    text-align: center;
   }
 
   .img-box-mirrored, .img-box {
@@ -502,6 +559,15 @@ footer {
 }
 
 @media screen and (max-width: 730px) {
+  .contact-content {
+    h3 {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
   nav {
     font-size: 16px;
   }
@@ -534,9 +600,9 @@ footer {
   }
 
   .scroll-main-btn {
-    width: 210px;
+    width: 180px;
     height: 28px;
-    font-size: 13px;
+    font-size: 14px;
 
     p, i{
       line-height: 28px;
@@ -548,6 +614,9 @@ footer {
   .img-box-mirrored, .img-box {
     height: 330px;
     width: 400px;
+  }
+  .about-me {
+    font-size: 14px;
   }
   
   .project-img {
@@ -574,16 +643,103 @@ footer {
   }
 
   .hb-title {
-    font-size: 46px;
+    font-size: 35px;
   }
 
   .scroll-main-btn {
-    width: 210px;
+    width: 170px;
     height: 28px;
     font-size: 13px;
 
     p, i{
       line-height: 28px;
     }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .hb-title {
+    font-size: 28px;
+  }
+  .project-mirrored, .project {
+    display: grid;
+    margin: 0;
+  }
+
+  .img-box-mirrored {
+    grid-row: 1;
+  }
+  .project-img:hover {
+    height: 240px;
+    width: 350px;
+    margin: 0;
+  }
+
+  .overview-box {
+    width: min(100% - 40px, 1150px);
+    margin-inline: auto;
+    margin: 30px;
+    height: auto;
+    align-items: left;
+    position: static;
+  }
+  
+  .overview-main, .overview-main-mirrored {
+    position: static;
+    align-items: left;
+    width: 100%;
+    left: 0;
+    height: auto;
+  }
+
+  .img-box-mirrored, .img-box {
+    justify-content: center;
+    width: 100%;
+  }
+  .project-img {
+    width: 370px;
+    height: 270px;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 13px;
+  }
+
+  .page-list {
+    justify-content: center;
+    a {
+      display: flex;
+    }
+  }
+
+  .contact-content {
+    h3 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 10px;
+      font-weight: 500;
+    }
+  }
+
+  .title-page {
+    font-size: 40px;
+    padding: 60px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    height: 49px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .fa-bars {
+    display: inline;
   }
 }

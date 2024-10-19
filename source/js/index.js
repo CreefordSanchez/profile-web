@@ -55,5 +55,11 @@ listener(window, 'scroll', () => {
       contactBtn.style.color = "#FD7014";
       break;
   }
-  
+});
+const navBarBtn = selector('.fa-bars');
+const navigation = selector('.nav-bar');
+
+listener(navBarBtn, 'click', () => {
+  navigation.classList.toggle('displayFlex');
+  navigation.classList.toggle('displayNone');
 });
