@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./source/css/index.css" media="all">
+    <script src="./source/js/index.js" defer></script>
   </head>
   <body>
     <div class="hero-banner" id="hero-page">
@@ -26,20 +27,21 @@
     </div>
     
     <header>
-      <div class="navigation container">
+      <div class="header-main container">
+        <i class="fa-solid fa-bug"></i>
         <nav>
           <ul>
             <li>
-              <a href="#hero-page">Home</a>
+              <a href="#hero-page" class="home-nav navBtn">Home</a>
             </li>
             <li>
-              <a href="#about-page">About</a>
+              <a href="#about-page" class="about-nav navBtn">About</a>
             </li>
             <li>
-              <a href="#project-page">Projects</a>
+              <a href="#project-page" class="project-nav navBtn">Projects</a>
             </li>
             <li>
-              <a href="#contact-page">Contact</a>
+              <a href="#contact-page" class="contact-nav navBtn">Contact</a>
             </li>
           </ul>
         </nav>
@@ -168,10 +170,16 @@
             <img class="project-img" src="./source/img/traveling-website.png">
           </div>
         </div>
-      </div>
     </main>
+    
+    <div class="contact-page" id="contact-page">
+      <div class="contact-content container">
+        <h3>I would love to be in touch with you!</h3>
+        <p>If you ever want to get in touch with please contact me</p>
+      </div>
+    </div>
     <footer>
-      <div class="footer-main container" id="contact-page">
+      <div class="footer-main container">
         <div class="social-list">
           <h3>Social</h3>
           <ul>

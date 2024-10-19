@@ -16,6 +16,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -49,10 +50,19 @@ header {
   top: 0;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
-
-nav {
+.header-main {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-bug {
+  font-size: 30px;
+  background-color: var(--app-orange);
+  border-radius: 10px;
+  color: var(--app-white);
+}
+nav {
   font-size: 20px;
   font-weight: 500;
   color: var(--app-white);
@@ -193,12 +203,12 @@ body {
   p {
     color: var(--app-white);
   }
+  
   img {
     height: 60px;
     width: 60px;
   }
 }
-
 /*-----------------------------------------------
  Projects 
 -------------------------------------------------*/
@@ -211,8 +221,8 @@ body {
 }
 
 .img-box {
-  height: calc(100vh - 54px);
-  width: 70vw;
+  height: 595px;
+  width: 927px;
   background-color: var(--app-orange);
   display: flex;
   align-items: center;
@@ -220,8 +230,8 @@ body {
 }
 
 .project-img {
-  height: 60vh;
-  width: 60vw;
+  height: 390px;
+  width: 795px;
 }
 
 .overview-box {
@@ -280,9 +290,10 @@ body {
   display: flex;
   justify-content: right;
 }
+
 .img-box-mirrored {
-  height: calc(100vh - 54px);
-  width: 70vw;
+  height: 595px;
+  width: 927px;
   background-color: var(--app-orange);
   display: flex;
   justify-content: right;
@@ -324,9 +335,32 @@ body {
   width: 64vw;
   margin: 15px;
 }
+
 /*-----------------------------------------------
  Contact-us 
 -------------------------------------------------*/
+.contact-page {
+  height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222931a9;
+}
+
+.contact-content {
+  text-align: center;
+  h3 {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--app-orange);
+    margin-bottom: 25px;
+  }
+
+  p {
+    color: var(--app-white);
+  }
+}
+
 footer {
   background-color: var(--app-lightblack);
   padding-top: 15px ;
@@ -357,4 +391,199 @@ footer {
 
 .page-list {
   margin: 0 20vw;
+}
+
+/*-----------------------------------------------
+ Media Query 
+-------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+  .about-main {
+    display: grid;
+    justify-content: center;
+  }
+
+  .code-list {
+    display: flex;
+    justify-content: center;
+  }
+  .about-me {
+    margin-bottom: 70px;
+    width: 400px;
+  }
+
+  .img-box-mirrored, .img-box {
+    height: 475px;
+    width: 807px;
+  }
+
+  .project-img {
+    height: 370px;
+    width: 675px;
+  }
+
+  .hb-title {
+    font-size: 50px;
+  }
+
+  .scroll-main-btn {
+    width: 248px;
+    height: 36px;
+    font-size: 15px;
+
+    p, i{
+      line-height: 36px;
+    }
+    
+  }
+
+  .overview-box {
+    h3 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .img-box-mirrored, .img-box {
+    height: 465px;
+    width: 720px;
+  }
+  .project-img {
+    height: 360px;
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .img-box-mirrored, .img-box {
+    height: 440px;
+    width: 610px;
+  }
+  .project-img {
+    height: 340px;
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 994px) {
+  .img-box-mirrored, .img-box {
+    height: 440px;
+    width: 540px;
+  }
+  .project-img {
+    height: 300px;
+    width: 480px;
+  }
+
+  .project-btn {
+    width: 90px;
+  }
+  .overview-box {
+    h3 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    a {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  nav {
+    font-size: 16px;
+  }
+  .img-box-mirrored, .img-box {
+    height: 390px;
+    width: 470px;
+  }
+  
+  .project-img {
+    height: 270px;
+    width: 420px;
+  }
+
+  .overview-box {
+    h3 {
+      font-size: 23px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    a {
+      font-size: 13px;
+    }
+  }
+
+  .hb-title {
+    font-size: 46px;
+  }
+
+  .scroll-main-btn {
+    width: 210px;
+    height: 28px;
+    font-size: 13px;
+
+    p, i{
+      line-height: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .img-box-mirrored, .img-box {
+    height: 330px;
+    width: 400px;
+  }
+  
+  .project-img {
+    height: 240px;
+    width: 350px;
+  }
+
+  .overview-box {
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 9px;
+    }
+
+    a {
+      font-size: 11px;
+    }
+  }
+
+  .project-btn {
+    width: 75px;
+  }
+
+  .hb-title {
+    font-size: 46px;
+  }
+
+  .scroll-main-btn {
+    width: 210px;
+    height: 28px;
+    font-size: 13px;
+
+    p, i{
+      line-height: 28px;
+    }
+  }
 }
