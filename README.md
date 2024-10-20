@@ -21,4 +21,4 @@ The HTML serves as the foundation of my webpage, providing the structure and con
 
 The CSS file is responsible for styling and enhancing the appearance of the elements you see.<br>
 
-To ensure the website is responsive across different devices, I've implemented media queries with the @media rule in CSS, along with additional functionality coded in a separate JavaScript file.<br>
+To ensure the website is responsive across different devices, I've implemented media queries with the @media rule in CSS, along with additional functionality coded in a separate JavaScript file.
