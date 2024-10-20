@@ -8,8 +8,11 @@ This project is build by using:
   <li>
     Java
   </li>
-  
-  Css
-  and Html
+  <li>
+    CSS
+  </li>
+  <li>
+    Html
+  </li>
 </ul>
 
