@@ -5,7 +5,10 @@ A porfolio website that showcase my skill and interest in the fields of coding
 <h2>Build with</h2>
 This project is build by using: 
 <ul>
-  Java
+  <li>
+    Java
+  </li>
+  
   Css
   and Html
 </ul>
