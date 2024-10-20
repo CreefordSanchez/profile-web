@@ -17,5 +17,8 @@ This project is build by using:
 </ul>
 
 <br>
-The html is the skeleton of my page where it will all of the content for my website <br>
-The CSS is the file for styling those projects your seeing<br>
+The HTML serves as the foundation of my webpage, providing the structure and content for the entire site.<br>
+
+The CSS file is responsible for styling and enhancing the appearance of the elements you see.<br>
+
+To ensure the website is responsive across different devices, I've implemented media queries with the @media rule in CSS, along with additional functionality coded in a separate JavaScript file.<br>
