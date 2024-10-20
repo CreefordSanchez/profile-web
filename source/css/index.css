@@ -73,7 +73,7 @@ header {
 }
 
 .fa-bug {
-  font-size: 30px;
+  font-size: 40px;
   background-color: var(--app-orange);
   border-radius: 10px;
   color: var(--app-white);
@@ -670,7 +670,9 @@ footer {
   }
 }
 @media screen and (max-width: 530px) {
-
+  .fa-bug {
+    font-size: 30px;
+  }
   .hb-title {
     font-size: 28px;
   }
