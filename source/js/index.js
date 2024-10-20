@@ -56,10 +56,14 @@ listener(window, 'scroll', () => {
       break;
   }
 });
+
 const navBarBtn = selector('.fa-bars');
 const navigation = selector('.nav-bar');
 
 listener(navBarBtn, 'click', () => {
-  navigation.classList.toggle('displayFlex');
-  navigation.classList.toggle('displayNone');
+  if (navigation.style.display === 'none') {
+    navigation.style.display = 'flex';
+  } else {
+    navigation.style.display = 'none';
+  }
 });

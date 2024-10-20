@@ -45,18 +45,27 @@ a, li, .fa-bars{
  Header 
 -------------------------------------------------*/
 header {
-  background-color: var(--app-lightblack);
   position: sticky;
   z-index: 1;
   top: 0;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
-.fa-bars {
+
+.header-content {
+  height: 100%;
+  width: 100%;
+  background-color: var(--app-lightblack);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  display: grid;
+  line-height: 49px;
+}
+
+.bar-icon {
   z-index: 2;
   display: none;
   color: var(--app-white);
   font-size: 20px
 }
+
 .header-main {
   display: flex;
   justify-content: space-between;
@@ -81,19 +90,22 @@ nav {
   }
 }
 
-.nav-bar {
+.navigator-box {
   display: none;
-  text-align: right;
-  padding-top: 49px;
   position: sticky;
   top: 0;
   z-index: 0;
+}
+.nav-bar {
+  display: none;
+  text-align: right;
   justify-content: right;
 
   ul {
     background-color: var(--app-lightblack);
     display: grid;
-    padding: 0 5px 0 20px;
+    padding: 0 15px 0 20px;
+    text-align: center;
   }
 
   li {
@@ -102,13 +114,6 @@ nav {
   }
 }
 
-.displayNone {
-  display: none;
-}
-
-.displayFlex {
-  display: flex;
-}
 /*-----------------------------------------------
  Hero-Banner 
 -------------------------------------------------*/
@@ -123,6 +128,7 @@ nav {
   width: 100%;
   background-color: #222931e1;
 }
+
 .hero-banner-main{
   height: 100vh;
   display: grid;
@@ -216,6 +222,7 @@ body {
 .flex-code-list {
   display: none;
 }
+
 .col {
   display: grid;
   justify-content: center;
@@ -347,6 +354,7 @@ body {
   width: 25vw;
   height: 60vh;
   right: -4vw;
+
   h3 {
     font-size: 35px;
     color: var(--app-white);
@@ -378,6 +386,11 @@ body {
   margin: 15px;
 }
 
+.project-btn:hover {
+  .line {
+    border-top: solid 5px var(--app-gray);
+  }
+}
 /*-----------------------------------------------
  Contact-us 
 -------------------------------------------------*/
@@ -656,8 +669,8 @@ footer {
     }
   }
 }
-
 @media screen and (max-width: 530px) {
+
   .hb-title {
     font-size: 28px;
   }
@@ -682,6 +695,10 @@ footer {
     height: auto;
     align-items: left;
     position: static;
+
+    p {
+      font-size: 12px;
+    }
   }
   
   .overview-main, .overview-main-mirrored {
@@ -729,6 +746,7 @@ footer {
     font-size: 40px;
     padding: 60px;
   }
+
   header {
     display: flex;
     align-items: center;
@@ -739,7 +757,10 @@ footer {
     display: none;
   }
 
-  .fa-bars {
+  .bar-icon {
     display: inline;
+  }
+  .navigator-box {
+    display: grid;
   }
 }
