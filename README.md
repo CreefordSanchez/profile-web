@@ -12,7 +12,10 @@ This project is build by using:
     CSS
   </li>
   <li>
-    Html
+    HTML
   </li>
 </ul>
 
+<br>
+The html is the skeleton of my page where it will all of the content for my website <br>
+The CSS is the file for styling those projects your seeing<br>
